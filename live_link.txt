@@ -1,0 +1,7 @@
+🌐 PULSEAI FITNESS COACH - PROJECT LINKS
+
+👉 Live Deployment URL (GitHub Pages):
+https://chidvi123.github.io/AI_FITNESS_TRACKER/
+
+👉 Source Code Repository (GitHub):
+https://github.com/chidvi123/AI_FITNESS_TRACKER
