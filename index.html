@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseAI Fitness - Personal AI Fitness Coach & Planner</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-fitness">
+
+    <!-- Glowing Background Atmosphere Grids -->
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
+
+    <!-- 1. FLOATING NAVIGATION BAR -->
+    <header class="navbar-wrapper">
+        <nav class="navbar">
+            <a href="#" class="nav-brand">
+                <i data-lucide="activity" class="brand-icon"></i>
+                <span>PulseAI</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#planner" class="nav-link">AI Planner</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#planner" class="primary-btn header-btn">
+                    <span>Generate Plan</span>
+                    <i data-lucide="sparkles" class="btn-icon"></i>
+                </a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-container container">
+            <div class="hero-content scroll-reveal">
+                <div class="glow-badge">
+                    <i data-lucide="zap"></i>
+                    <span>Powered by Advanced Biometric Models</span>
+                </div>
+                <h1>Your AI Personal <span class="gradient-text">Trainer.</span> Redefined.</h1>
+                <p class="subtitle">PulseAI is your digital fitness coach. It parses your smartwatch biometric logs, evaluates your lifting posture using camera vision, and auto-generates custom nutrition plans to accelerate your results.</p>
+                <div class="hero-buttons">
+                    <a href="#planner" class="primary-btn shadow-lime">
+                        <span>Initialize AI Planner</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#about" class="secondary-btn">
+                        <span>How It Works</span>
+                        <i data-lucide="info"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Graphic Illustration Container -->
+            <div class="hero-graphic scroll-reveal delay-200">
+                <div class="hologram-wrapper">
+                    <svg viewBox="0 0 500 500" class="hologram-svg" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer Orbiting Rings -->
+                        <circle cx="250" cy="250" r="220" stroke="rgba(212, 255, 0, 0.15)" stroke-width="1.5" fill="none" stroke-dasharray="10 5" class="orbiting-ring-1" />
+                        <circle cx="250" cy="250" r="180" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" fill="none" class="orbiting-ring-2" />
+                        <circle cx="250" cy="250" r="140" stroke="rgba(212, 255, 0, 0.25)" stroke-width="2" fill="none" stroke-dasharray="20 40 10 5" class="orbiting-ring-3" />
+                        
+                        <!-- Core Pulse Activity Node -->
+                        <circle cx="250" cy="250" r="60" fill="url(#coreGradient)" class="core-node" />
+                        
+                        <!-- Pulse Sine Wave -->
+                        <path d="M 120 250 L 210 250 L 220 210 L 230 290 L 245 230 L 255 270 L 265 250 L 380 250" 
+                              stroke="#d4ff00" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" class="pulse-path" />
+                        
+                        <defs>
+                            <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="rgba(212, 255, 0, 0.4)" stop-opacity="1" />
+                                <stop offset="60%" stop-color="rgba(14, 17, 17, 0.8)" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#0e1111" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    <div class="hologram-overlay">
+                        <i data-lucide="heart" class="holo-icon top-left"></i>
+                        <i data-lucide="flame" class="holo-icon top-right"></i>
+                        <i data-lucide="scale" class="holo-icon bottom-left"></i>
+                        <i data-lucide="dumbbell" class="holo-icon bottom-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ABOUT US SECTION -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-info scroll-reveal">
+                    <span class="section-tag text-lime">Coaching Framework</span>
+                    <h2>Scientific Training Cycles, Tailored to You</h2>
+                    <p>PulseAI was designed by expert sports scientists and machine learning researchers. We believe that standard, rigid gym templates fail because your body changes daily based on sleep, stress, and nutrition. PulseAI acts as an active assistant in your pocket, adapting your targets dynamically.</p>
+                    
+                    <div class="pillars-list">
+                        <div class="pillar-item">
+                            <div class="pillar-number">01</div>
+                            <div>
+                                <h4>Biometric Log Syncing</h4>
+                                <p>Syncs directly with Apple Health, Garmin, or Fitbit to automatically adjust your workout weights if your recovery score is low.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <div class="pillar-number">02</div>
+                            <div>
+                                <h4>Smart Form & Posture Audits</h4>
+                                <p>Open the camera during squats or deadlifts. PulseAI's vision model checks your spinal angle in real-time to prevent injuries.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <div class="pillar-number">03</div>
+                            <div>
+                                <h4>Macro-Nutritional Balance</h4>
+                                <p>Generate custom high-protein meal recipes matching your exact calorie boundaries, with automated grocery lists.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics and Values panel -->
+                <div class="about-stats-panel scroll-reveal delay-200">
+                    <div class="stats-card glass-panel">
+                        <h3>Athletic Metrics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <span class="stat-num" data-count="94.8">0</span><span class="stat-symbol">%</span>
+                                <span class="stat-lbl">Goal Success Rate</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-num" data-count="12.4">0</span><span class="stat-symbol">M+</span>
+                                <span class="stat-lbl">Calories Burned Globally</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-num" data-count="250">0</span><span class="stat-symbol">k+</span>
+                                <span class="stat-lbl">Active Athletes Onboarded</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-num" data-count="0">0</span><span class="stat-symbol">%</span>
+                                <span class="stat-lbl">User Joint Injury Incidence</span>
+                            </div>
+                        </div>
+                        <div class="quote-box">
+                            <i data-lucide="quote" class="quote-icon"></i>
+                            <p>"PulseAI completely replaced my private personal trainer. The posture checking alone saved my lower back, and my macro targets update whenever my weight fluctuates."</p>
+                            <h5>- Sarah Jenkins, Marathon Runner</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICES SECTION -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag text-lime">Core Features</span>
+                <h2>Smarter Workouts, Personalized Outputs</h2>
+                <p>We deploy software-hardware integrated units optimized to interface with standard factory pipelines or custom tasks.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card glass-panel scroll-reveal">
+                    <div class="service-icon-box">
+                        <i data-lucide="dumbbell" class="service-icon lime"></i>
+                    </div>
+                    <h3>Hyper-Custom Training</h3>
+                    <p>Weightlifting, cardio, and active recovery routines tailored specifically to your equipment list. Includes sets, reps, rests, and dynamic progression suggestions.</p>
+                    <ul class="service-bullets">
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Dumbbell/Gym flex setups</li>
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Progression load calculator</li>
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Active recovery matching</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card glass-panel scroll-reveal delay-100">
+                    <div class="service-icon-box">
+                        <i data-lucide="apple" class="service-icon lime"></i>
+                    </div>
+                    <h3>Macro Nutrition Sync</h3>
+                    <p>AI meal guides containing easy recipes matching your exact daily protein, carbohydrate, and fat metrics. Updates instantly if you miss a workout.</p>
+                    <ul class="service-bullets">
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Dynamic recipe modifier</li>
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Auto shopping checklists</li>
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Macro split adjustments</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass-panel scroll-reveal delay-200">
+                    <div class="service-icon-box">
+                        <i data-lucide="video" class="service-icon lime"></i>
+                    </div>
+                    <h3>Posture Check Engine</h3>
+                    <p>Post-workout video upload or live analysis. Our vision model reviews your body joints to map alignments, detecting form errors.</p>
+                    <ul class="service-bullets">
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Spinal angle evaluation</li>
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Range of motion metrics</li>
+                        <li><i data-lucide="check-circle" class="bullet-icon"></i> Fatigue alert limits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTERACTIVE CONFIGURATOR (PLANNER) -->
+    <section id="planner" class="section config-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag text-lime">Interactive Laboratory</span>
+                <h2>AI Routine & Macro Planner</h2>
+                <p>Select your fitness goals, level, and available training equipment to calculate your custom fitness plan immediately.</p>
+            </div>
+
+            <div class="configurator-wrapper glass-panel scroll-reveal">
+                <!-- Left panel: Controls -->
+                <div class="config-controls">
+                    <!-- Control 1: Goal -->
+                    <div class="config-group">
+                        <h4>1. Select Your Target Goal</h4>
+                        <p class="config-desc">Defines your metabolic baseline calculations and target macros.</p>
+                        <div class="radio-options">
+                            <label class="radio-card active">
+                                <input type="radio" name="fit-goal" value="loss" checked>
+                                <div>
+                                    <h5>Fat Loss & Lean Tone</h5>
+                                    <p>Caloric deficit, high-protein muscle shielding</p>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="fit-goal" value="gain">
+                                <div>
+                                    <h5>Muscle Gain & Hypertrophy</h5>
+                                    <p>Caloric surplus, high volume strength training</p>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="fit-goal" value="endurance">
+                                <div>
+                                    <h5>Athletic Endurance & Stamina</h5>
+                                    <p>Balanced fuel, aerobic threshold capacity</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Control 2: Experience Level -->
+                    <div class="config-group">
+                        <h4>2. Fitness Experience Level</h4>
+                        <p class="config-desc">Controls workout splits, rep volumes, and rest timers.</p>
+                        <div class="radio-options">
+                            <label class="radio-card active">
+                                <input type="radio" name="fit-level" value="beginner" checked>
+                                <div>
+                                    <h5>Beginner</h5>
+                                    <p>Basic movements, low volume, form alignment</p>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="fit-level" value="intermediate">
+                                <div>
+                                    <h5>Intermediate</h5>
+                                    <p>Progressive overload, moderate weight metrics</p>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="fit-level" value="advanced">
+                                <div>
+                                    <h5>Advanced</h5>
+                                    <p>High intensity splits, fatigue tracking limits</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Control 3: Available Equipment -->
+                    <div class="config-group">
+                        <h4>3. Available Training Equipment</h4>
+                        <p class="config-desc">Customizes target exercise structures for safety.</p>
+                        <div class="radio-options">
+                            <label class="radio-card active">
+                                <input type="radio" name="fit-equip" value="bodyweight" checked>
+                                <div>
+                                    <h5>Bodyweight & Bands Only</h5>
+                                    <p>Home friendly, calisthenics target</p>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="fit-equip" value="dumbbells">
+                                <div>
+                                    <h5>Home Gym (Dumbbells/Bands)</h5>
+                                    <p>Intermediate versatility, free weights focus</p>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="fit-equip" value="gym">
+                                <div>
+                                    <h5>Commercial Gym Access</h5>
+                                    <p>Full cables, barbells, and machine grids</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right panel: Live Stats -->
+                <div class="config-display">
+                    <div class="chassis-preview-box">
+                        <div class="preview-glowing-ring"></div>
+                        <i data-lucide="flame" class="robot-avatar"></i>
+                        <span class="preview-badge animate-pulse">PLAN GENERATOR ACTIVE</span>
+                    </div>
+
+                    <div class="stats-indicators">
+                        <h4>Calculated Routine Targets</h4>
+                        
+                        <!-- Target Calories -->
+                        <div class="pricing-display" style="margin-top: 0; margin-bottom: 24px;">
+                            <span class="pricing-label">Daily Target Intake</span>
+                            <h3 class="pricing-amount" id="val-calories">1,800 Kcal</h3>
+                        </div>
+
+                        <!-- Weekly Days -->
+                        <div class="metric-progress-wrapper">
+                            <div class="metric-label">
+                                <span>Weekly Training Sessions</span>
+                                <span id="val-days">3 Days / Week</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill lime" id="bar-days" style="width: 43%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Estimated Duration -->
+                        <div class="metric-progress-wrapper">
+                            <div class="metric-label">
+                                <span>Goal Timeline Duration</span>
+                                <span id="val-timeline">12 Weeks</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill lime" id="bar-timeline" style="width: 60%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Macronutrient Splits Info -->
+                        <div class="macros-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; text-align: center;">
+                            <div class="macro-box" style="background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                                <span style="font-size: 0.72rem; color: var(--text-secondary); display: block;">Protein</span>
+                                <strong id="val-protein" style="font-size: 1.1rem; color: white; font-family: var(--font-heading);">140g</strong>
+                            </div>
+                            <div class="macro-box" style="background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                                <span style="font-size: 0.72rem; color: var(--text-secondary); display: block;">Carbs</span>
+                                <strong id="val-carbs" style="font-size: 1.1rem; color: white; font-family: var(--font-heading);">180g</strong>
+                            </div>
+                            <div class="macro-box" style="background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                                <span style="font-size: 0.72rem; color: var(--text-secondary); display: block;">Fats</span>
+                                <strong id="val-fats" style="font-size: 1.1rem; color: white; font-family: var(--font-heading);">50g</strong>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="primary-btn checkout-btn" id="config-checkout-btn">
+                            <span>Request Onboarding Guide</span>
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CONTACT US SECTION -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-header scroll-reveal">
+                    <span class="section-tag text-lime">Athlete Uplink</span>
+                    <h2>Secure Your Custom Coaching Spot</h2>
+                    <p>Have specific injury histories, timeline targets, or smart device integrations questions? Fill in your details below. Our sports-coaching algorithm prepares your setup validation file.</p>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-info-card glass-panel">
+                            <i data-lucide="mail" class="info-icon"></i>
+                            <div>
+                                <h5>Digital Mail</h5>
+                                <p>coach@pulseai-fitness.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card glass-panel">
+                            <i data-lucide="phone" class="info-icon"></i>
+                            <div>
+                                <h5>Inquiries</h5>
+                                <p>+1 (555) 839-2814</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card glass-panel">
+                            <i data-lucide="map-pin" class="info-icon"></i>
+                            <div>
+                                <h5>HQ Node</h5>
+                                <p>Silicon Valley Athletics, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper glass-panel scroll-reveal delay-200">
+                    <form id="cyber-contact-form" class="cyber-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Athlete Name</label>
+                                <input type="text" id="form-name" placeholder="E.g. Sarah Jenkins" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-age">Age Group</label>
+                                <input type="text" id="form-age" placeholder="25" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-email">Athlete Email Node</label>
+                            <input type="email" id="form-email" placeholder="sarah@athlete.io" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-spec">Calculated Targets & Health History</label>
+                            <textarea id="form-spec" rows="5" placeholder="Specify any joint histories, preferred cardio, or target calories..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="primary-btn form-submit-btn shadow-lime">
+                            <span>Submit Profile Uplink</span>
+                            <i data-lucide="activity"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <i data-lucide="activity"></i>
+                    <span>PulseAI</span>
+                </a>
+                <p>Personalized workout algorithms built on real-time smartwatch bio-metrics.</p>
+            </div>
+            
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <h5>Modules</h5>
+                    <ul>
+                        <li><a href="#hero">Posture Auditor</a></li>
+                        <li><a href="#services">Meal Macros API</a></li>
+                        <li><a href="#about">Training Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Trust</h5>
+                    <ul>
+                        <li><a href="#about">Adaptive Integrity</a></li>
+                        <li><a href="#contact">Safe Overloads</a></li>
+                        <li><a href="#contact">Emergency Logs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 PulseAI Fitness. All rights reserved. Designed for InAmigos Foundation Portfolio.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Github"><i data-lucide="github"></i></a>
+                <a href="#" aria-label="Linkedin"><i data-lucide="linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification display helper -->
+    <div id="toast-notification" class="toast-card">
+        <i data-lucide="check-circle" class="toast-icon"></i>
+        <div>
+            <h5 id="toast-title">Athlete Uplink Active</h5>
+            <p id="toast-msg">Biometric profile synced successfully.</p>
+        </div>
+    </div>
+
+    <!-- Script references -->
+    <script src="app.js"></script>
+</body>
+</html>
