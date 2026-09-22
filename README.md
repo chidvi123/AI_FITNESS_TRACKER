@@ -1,4 +1,4 @@
-# PulseAI Fitness Coach 🏋️‍♂️✨
+# PulseAI Fitness Coach - Fetch Vs Pull🏋️‍♂️✨
 
 [![Language - HTML5](https://img.shields.io/badge/Language-HTML5-orange?style=for-the-badge&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 [![Style - CSS3](https://img.shields.io/badge/Style-CSS3-blue?style=for-the-badge&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
